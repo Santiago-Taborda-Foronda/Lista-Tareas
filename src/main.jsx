@@ -1,8 +1,11 @@
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import { App } from './App';
+import { TasksProvider } from './context/contetxt';
 
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import { App } from './App'
 
-
-createRoot(document.getElementById('root')).render(<App />
-)
+createRoot(document.getElementById('root')).render(
+    <TasksProvider>
+    <App />
+    </TasksProvider>
+);
